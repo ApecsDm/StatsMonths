@@ -38,20 +38,18 @@ public class StatsService {
     }
 
     public int belowAvg(int[] sales) {
-        int Avg = 15;
         int count = 0;
         for (int sale : sales) {
-            if (sale < Avg)
+            if (sale < calculateAvg(sales))
                 count++;
         }
         return count;
     }
 
     public int aboveAvg(int[] sales) {
-        int Avg = 15;
         int count = 0;
         for (int sale : sales) {
-            if (sale > Avg)
+            if (sale > calculateAvg(sales))
                 count++;
         }
         return count;
